@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>اتصل بنا | BookNest</title>
+    <title>حسابي | BookNest</title>
     <link
-      href="vendor/bootstrap.rtl.min.css"
+      href="../vendor/bootstrap.rtl.min.css"
       rel="stylesheet"
     />
     <link
-      href="vendor/bootstrap-icons.css"
+      href="../vendor/bootstrap-icons.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="vendor/google-fonts.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../vendor/google-fonts.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <div class="top-bar">
@@ -30,8 +30,8 @@
       <div class="container navbar-top-inner">
         <a
           class="navbar-brand d-flex align-items-center gap-2"
-          href="index.html"
-          ><img src="images/sample logo 1.png" alt="BookNest" width="44" /><span
+          href="../index.html"
+          ><img src="../images/sample logo 1.png" alt="BookNest" width="44" /><span
             >Book<span class="brand-accent">Nest</span></span
           ></a
         >
@@ -60,7 +60,7 @@
       <div class="container">
         <ul class="navbar-nav main-menu">
           <li>
-            <a class="nav-link" href="index.html"
+            <a class="nav-link" href="../index.html"
               ><i class="bi bi-house-door"></i><span>الرئيسية</span></a
             >
           </li>
@@ -83,70 +83,29 @@
       </div>
     </nav>
     <main>
-      <section id="contact" class="section-pad contact-section page-section">
+      <section id="account" class="section-pad account-section page-section">
         <div class="container">
-          <div class="section-heading">
+          <div class="auth-card">
             <div>
-              <span class="eyebrow">نحن هنا لمساعدتك</span>
-              <h1>تواصل معنا</h1>
+              <span class="eyebrow">مساحتك الخاصة</span>
+              <h1>أهلًا بك في BookNest</h1>
+              <p>سجّل دخولك لحفظ كتبك ومتابعة طلباتك.</p>
             </div>
-          </div>
-          <div class="row g-4">
-            <div class="col-lg-5">
-              <div class="contact-card">
-                <div>
-                  <i class="bi bi-geo-alt"></i
-                  ><span>شارع التربية، مدينة إب، اليمن</span>
-                </div>
-                <div>
-                  <i class="bi bi-telephone"></i><span>+967 770434482</span>
-                </div>
-                <div>
-                  <i class="bi bi-envelope"></i><span>alsiidalahdal11@gmail.com</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-7">
-              <form id="contactForm" class="contact-form">
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <input
-                      class="form-control"
-                      placeholder="الاسم الكامل"
-                      required
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <input
-                      type="email"
-                      class="form-control"
-                      placeholder="البريد الإلكتروني"
-                      required
-                    />
-                  </div>
-                  <div class="col-12">
-                    <input
-                      class="form-control"
-                      placeholder="الموضوع"
-                      required
-                    />
-                  </div>
-                  <div class="col-12">
-                    <textarea
-                      class="form-control"
-                      rows="5"
-                      placeholder="رسالتك هنا..."
-                      required
-                    ></textarea>
-                  </div>
-                  <div class="col-12">
-                    <button class="btn btn-primary" type="submit">
-                      إرسال الرسالة <i class="bi bi-send me-2"></i>
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
+            <form id="loginForm" class="auth-form">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="البريد الإلكتروني"
+                required
+              /><input
+                type="password"
+                class="form-control"
+                placeholder="كلمة المرور"
+                required
+              /><button class="btn btn-primary" type="submit">
+                تسجيل الدخول
+              </button>
+            </form>
           </div>
         </div>
       </section>
@@ -155,7 +114,7 @@
       <div
         class="container d-flex flex-wrap justify-content-between align-items-center gap-3"
       >
-        <a class="navbar-brand" href="index.html"
+        <a class="navbar-brand" href="../index.html"
           >Book<span class="brand-accent">Nest</span></a
         ><span>© 2026 BookNest. جميع الحقوق محفوظة.</span>
         <div>
@@ -165,7 +124,7 @@
       </div>
     </footer>
     <div id="toast" class="toast-message"></div>
-    <script src="vendor/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="../vendor/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>

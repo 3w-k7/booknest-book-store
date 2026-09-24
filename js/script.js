@@ -1,3 +1,4 @@
+const BASE_PATH = location.pathname.includes('/page/') ? '../' : '';
 const books = [
   {
     id: 3,
@@ -231,7 +232,7 @@ function bookCard(book) {
   return `
     <div class="col-sm-6 col-lg-4">
       <article class="book-card">
-        <img src="${book.image}" alt="${book.title}">
+        <img src="${BASE_PATH}${book.image}" alt="${book.title}">
         <div class="card-body">
           <h3>${book.title}</h3>
           <div class="author">${book.author} · ${book.category}</div>
@@ -284,7 +285,7 @@ function renderCart() {
 
           return `
             <div class="cart-row">
-              <img src="${book.image}" alt="${book.title}">
+              <img src="${BASE_PATH}${book.image}" alt="${book.title}">
               <div class="grow">
                 <h3>${book.title}</h3>
                 <p>${book.author}</p>
@@ -326,14 +327,15 @@ function showDetail(id) {
   const book = findBook(id);
 
   if (!document.getElementById('detailContent')) {
-    location.href = `book-detail.html?id=${id}`;
+    const detailPath = location.pathname.includes('/page/') ? 'book-detail.html' : 'page/book-detail.html';
+    location.href = `${detailPath}?id=${id}`;
     return;
   }
 
   document.getElementById('detailContent').innerHTML = `
     <div class="row g-5 align-items-center">
       <div class="col-lg-5">
-        <img class="detail-img" src="${book.image}" alt="${book.title}">
+        <img class="detail-img" src="${BASE_PATH}${book.image}" alt="${book.title}">
       </div>
       <div class="col-lg-7 detail-content">
         <span class="eyebrow">تفاصيل الكتاب</span>
